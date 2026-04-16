@@ -68,6 +68,4 @@ print(10/2.0)
 print(type(10/2.0))
 # 문제 14: 초를 분/초로 환산 전체 초(second)를 입력받아 몇 분 몇 초인지 계산하여 출력하시오. (예: 70초 -> 1분 10초)
 second = int(input("초 입력>"))
-minute = second//60
-second2 = second%60
-print(minute,"분" , second2,"초")
+print(second//60,"분" , second%60,"초")
