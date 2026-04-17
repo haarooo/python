@@ -1,0 +1,70 @@
+
+# 범위 range 
+# 숫자 1개인 경우
+print(list(range(5)))
+# 숫자 2개인 경우
+print(list(range(0,5)))
+# 숫자 3개인 경우
+print(list(range(0, 10 ,2)))
+
+# 반복문과 범위 활용
+
+# 예시1 , 1부터 10까지 출력
+for i in range(1,11):
+    print(i)
+
+# 예시2 , 1부터 10까지 홀수만 출력
+for i in range(1,11,2):
+    print(i)
+
+# 예시3 리스트와 범위 조합
+for index in range(len(array)): # 0 부터 리스트의 마지막 인덱스까지
+    print(array[index])
+
+# 예시4 역순
+for i in range(4, 0-1 , -1):
+    print(i)
+
+for i in reversed(range(5)):
+    print(i)
+
+for 단 in range(1,10):
+    for 곱 in range(1,10):
+        print(단,"*",곱 ,"=",단*곱)
+
+# while 반복문
+
+# 무한반복
+# while True :
+#     print("." , end = "")
+
+# 1 부터 10까지 출력
+
+i = 1
+while i<11:
+    print(i)
+    i+=1
+
+# 리스트 활용
+list_a = [1,2,3,2]
+while 2 in list_a:
+    list_a.remove(2)
+
+print(list_a)
+
+
+# break
+i = 0
+while True:
+    print(i)
+    i+=1
+    msg=input("종료>")
+    if msg in ['Y','y']:
+        break
+
+# continue
+numbers = [5,14,4,21,55]
+for number in numbers:
+    if number <10 :
+        continue
+    print(number)
