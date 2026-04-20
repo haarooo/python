@@ -68,3 +68,21 @@ for number in numbers:
     if number <10 :
         continue
     print(number)
+
+key_list = ['name' , 'hp']
+value_list = ['기사' , 200]
+character = {}
+for i in range(len(key_list)):
+    character[key_list[i]] = value_list[i]
+
+print(character)
+
+
+target = 10000
+total = 0
+n = 1
+while total <= target:
+    total += n
+    n += 1
+
+print(f"{n-1}을 더할 때 {target}을 넘으며 그때의 값은 {total}입니다")
