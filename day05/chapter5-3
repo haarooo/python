@@ -1,0 +1,26 @@
+
+#  튜플 : () 소괄호 이용하여 여러 자료들을 감싼 자료형
+
+# 튜플 선언
+tuple_test = (10 ,20 ,30)
+print(tuple_test)
+
+# 요소 호출
+print(tuple_test[0])
+
+# 주의할 점: 수정 불가능 , 요소가 1개인 경우 쉽표 넣어준다
+tuple_test = (25,)
+
+# 할당 구문
+[a,b] = [10 ,20]
+print(a,b)
+
+# 튜플 이용한 스왑
+a , b = b , a 
+print(a,b)
+
+# 함수 리턴 값
+def test():
+    return 10,20
+
+print(test())
