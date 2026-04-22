@@ -76,7 +76,7 @@ def get_top_student(data):
     top_name = data[0]['name']
     top_score = data[0]['score']
     
-    for i in lst:
+    for i in data:
         if i['score'] > top_score:
             top_score = i['score']
             top_name = i['name']
