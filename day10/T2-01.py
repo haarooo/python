@@ -80,3 +80,5 @@ print(x.dtype) # 문자열을 바이트 형태로 저장
 x = np.array([1.3,2.1,3.3])
 y = x.astype(np.int32)
 print(y.dtype)
+
+
