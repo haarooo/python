@@ -62,3 +62,45 @@ plt.pie(sizes , labels=labels , colors=colors , explode= explode  , startangle=9
 # %형식문자 %자릿수,소수자릿수f , f실수 , %%: 형식문자가 아닌 문자 '%'표시
 plt.legend()
 plt.show()
+
+# 선점도 , 밀집도 , .scatter(x,y , c(color)='색상' , )
+x = [1.5 , 2.5 , 3.5 , 4.5 , 5.5]
+y = [50 , 60 , 65 , 70 , 75]
+
+plt.scatter(x,y , c='red' , s=100)
+plt.grid()
+plt.show()
+
+# 히스토그램 , 상관관계 , .hist(값 , color='' , alpha=투명도 , bins=구간개수)
+
+# 샘플 데이터
+data=[]
+for i in range(50):
+    value = sum([ (i*j)%100/100 for j in range(1,13)])
+    data.append(value)
+
+# 차트 만들기
+plt.hist(data , color='skyblue' , alpha = 0.5 , bins =30)
+plt.show()
+
+# 다중 그래프 표현 , .subplot(행 , 열 , figsize=(가로,세로))
+fig ,axs = plt.subplots(1, 2 , figsize=(10,7))
+# fig : 다중 그래프를 가지고 있는 전체 그 래프 
+# axs : 다중 그래프의 위치 , axs[0] 첫번째 그래프
+axs[0].plot([1,2,3],[1,4,7])
+axs[0].set_title('선그래프')
+axs[0].set_xlabel('x축제목')
+axs[0].set_ylabel('y축제목')
+
+axs[1].bar([1,2,3],[3,5,2]) 
+axs[1].set_title('막대그래프')
+axs[1].set_xlabel('x축제목')
+axs[1].set_ylabel('y축제목')
+
+# 그래프 이미지(png) 다운로드 , .savefig('파일경로')
+plt.savefig('./day13/save_chart.png')
+
+
+plt.show()
+
+# fig 
