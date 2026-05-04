@@ -61,8 +61,8 @@ print(x)
 df1 = pd.DataFrame({'ID': [1, 2, 3], 'Name': ['Ant', 'Bee', 'Cat']})
 df2 = pd.DataFrame({'ID': [2, 3, 4], 'Score': [88, 92, 85]})
 
-pd.merge(df1, df2 , 'inner')
-pd.merge(df1 , df2 , 'left')
+pd.merge(df1, df2 , on='ID' , how='inner')
+pd.merge(df1 , df2 , on='ID' , how='left')
 
 
 
@@ -124,5 +124,8 @@ data = pd.DataFrame({
 'Color': ['red', 'yellow', 'red', 'orange']
 })
 
+print(data['Fruit'].value_counts())
+data.columns = ['Item' , 'Style'] # data.columns 모든열 , data.index 모든행
 print(data)
-data.value_counts()
+result = data.rename(columns={'Fruit':'Item' , 'Color':'Style'}) # 원본수정 x
+print(result)
