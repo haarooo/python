@@ -3,7 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import pandas as pd
-import koreanfont
 
 book_list = []
 
@@ -65,6 +64,8 @@ df.to_csv(
     index=False,
     na_rep='Unknown'                    # 결측값 치환 
 )
+
+print(df.info())
 
 
 

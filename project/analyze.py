@@ -7,7 +7,6 @@ import sys
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
-
 import koreanfont
 
 df = pd.read_csv(
@@ -22,7 +21,6 @@ print(df)
 average_price1 = df['가격'].mean()
 average_price = int(average_price1)
 print(average_price)
-print(average_price)
 # 최고 가격
 high_price = df['가격'].max()
 print(high_price)
@@ -32,6 +30,7 @@ print(low_price)
 
 # 연도별 도서 수 계산
 year_count = df['출판연도'].value_counts().sort_index(ascending=False)
+print(year_count)
 frequent_key = year_count.idxmax()
 print(frequent_key)
 
