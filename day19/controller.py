@@ -1,0 +1,35 @@
+
+#  라우터 : 특정 도메인(주소) 묶어주는 역할
+from fastapi import APIRouter
+
+router = APIRouter(prefix="/api")
+
+# 서비스 불러오기
+from service import item_service
+# REST API 정의 
+
+# 1. GET
+@router.get("/item")
+async def item(id :int):
+    return item_service.item(id)
+
+
+# 1-2 GET
+@router.get("/items")
+async def items():
+    return item_service.items()
+
+# 2. POST
+@router.post("/save")
+async def save(item : dict):
+    return item_service.save(item)
+
+# 3. PUT 
+@router.put("/update")
+async def update(item : dict):
+    return item_service.update(item)
+
+# 4. DELETE
+@router.delete("/delete")
+async def delete(id : int):
+    return item_service.delete(id)
